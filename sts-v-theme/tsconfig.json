@@ -18,6 +18,12 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
+    "paths": {
+      "sts-v-theme-lib": [
+        "dist/sts-v-theme-lib/sts-v-theme-lib",
+        "dist/sts-v-theme-lib"
+      ]
+    },
     "lib": [
       "es2020",
       "dom"
