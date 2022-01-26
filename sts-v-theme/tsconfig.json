@@ -19,6 +19,10 @@
     "target": "es2017",
     "module": "es2020",
     "paths": {
+      "sts-v-theme": [
+        "dist/sts-v-theme/sts-v-theme",
+        "dist/sts-v-theme"
+      ],
       "sts-v-theme-lib": [
         "dist/sts-v-theme-lib/sts-v-theme-lib",
         "dist/sts-v-theme-lib"

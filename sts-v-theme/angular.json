@@ -136,6 +136,37 @@
           }
         }
       }
+    },
+    "sts-v-theme": {
+      "projectType": "library",
+      "root": "projects/sts-v-theme",
+      "sourceRoot": "projects/sts-v-theme/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/sts-v-theme/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sts-v-theme/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sts-v-theme/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/sts-v-theme/src/test.ts",
+            "tsConfig": "projects/sts-v-theme/tsconfig.spec.json",
+            "karmaConfig": "projects/sts-v-theme/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "sts-v-theme-lib"
