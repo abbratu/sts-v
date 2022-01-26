@@ -3,5 +3,8 @@
   "dest": "../../dist/sts-v-theme-lib",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "assets": [
+    "sts-v-theme.scss"
+  ]
 }

@@ -1,0 +1,175 @@
+
+
+@use '@angular/material' as mat;
+@include mat.core();
+
+$sts-v-black: (
+    50 : #e0e0e0,
+    100 : #b3b3b3,
+    200 : #808080,
+    300 : #4d4d4d,
+    400 : #262626,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #a6a6a6,
+    A200 : #8c8c8c,
+    A400 : #737373,
+    A700 : #666666,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$sts-v-blue: (
+    50 : #e3e8ee,
+    100 : #b9c5d4,
+    200 : #8a9fb7,
+    300 : #5b789a,
+    400 : #375b85,
+    500 : #143e6f,
+    600 : #123867,
+    700 : #0e305c,
+    800 : #0b2852,
+    900 : #061b40,
+    A100 : #769fff,
+    A200 : #437bff,
+    A400 : #1057ff,
+    A700 : #0049f6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$sts-v-yellow: (
+    50 : #fefaf0,
+    100 : #fdf2d9,
+    200 : #fceac0,
+    300 : #fae1a6,
+    400 : #f9da93,
+    500 : #f8d480,
+    600 : #f7cf78,
+    700 : #f6c96d,
+    800 : #f5c363,
+    900 : #f3b950,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #fff7ea,
+    A700 : #ffeed0,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$sts-v-red: (
+    50 : #f5e4e6,
+    100 : #e6bac0,
+    200 : #d68d97,
+    300 : #c65f6d,
+    400 : #b93c4d,
+    500 : #ad1a2e,
+    600 : #a61729,
+    700 : #9c1323,
+    800 : #930f1d,
+    900 : #830812,
+    A100 : #ffb2b6,
+    A200 : #ff7f85,
+    A400 : #ff4c55,
+    A700 : #ff323d,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #ffffff,
+    )
+);
+
+
+
+$sts-v-theme-primary: mat.define-palette($sts-v-blue);
+$sts-v-theme-accent: mat.define-palette($sts-v-yellow);
+$sts-v-theme-warn: mat.define-palette($sts-v-red);
+
+// $sts-v-theme-lib-app-theme: mat.define-light-theme((
+//   color: (
+//     primary: $sts-v-theme-primary,
+//     accent: $sts-v-theme-accent,
+//     warn: $sts-v-theme-warn,
+//   )
+// ));
+
+$sts-v-theme-lib-app-theme: mat.define-dark-theme((
+  color: (
+    primary: $sts-v-theme-primary,
+    accent: $sts-v-theme-accent,
+    warn: $sts-v-theme-warn,
+  )
+));
+
+
+@include mat.all-component-themes($sts-v-theme-lib-app-theme);
+
+
+html { 
+  height: 100%; 
+  margin: 0;
+  padding: 0;
+  
+  body { 
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+  }
+}
