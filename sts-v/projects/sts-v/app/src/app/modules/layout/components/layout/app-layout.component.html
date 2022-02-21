@@ -1,9 +1,11 @@
 <div fxLayout="column" fxFlexFill>
-    <app-layout-header class="mat-elevation-z4">
-        <app-layout-nav></app-layout-nav>
-    </app-layout-header>
-    <main fxFlex>
-        <ng-content></ng-content>
-    </main>
-    <app-layout-footer class="mat-elevation-z4"></app-layout-footer>
+  <app-layout-header class="mat-elevation-z4">
+    <app-layout-nav></app-layout-nav>
+  </app-layout-header>
+  <main fxFlex>
+    <app-layout-container>
+      <ng-content></ng-content>
+    </app-layout-container>
+  </main>
+  <app-layout-footer class="mat-elevation-z4"></app-layout-footer>
 </div>
