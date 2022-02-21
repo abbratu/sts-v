@@ -1,0 +1,16 @@
+{
+  "name": "sts-v",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/abbratu/sts-v.git",
+  "author": "Adrian Bratu <adrian.bratu@amrock.com>",
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "create:project": "ng new sts-v --create-application=false"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@angular/cli": "^13.2.4"
+  }
+}
