@@ -1,0 +1,21 @@
+@use '@angular/material' as mat;
+
+@import './palettes';
+
+// the dark theme
+$sts-v-app-dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $sts-v-app-primary,
+    accent: $sts-v-app-accent,
+    warn: $sts-v-app-warn,
+  )
+));
+
+
+$sts-v-app-light-theme: mat.define-light-theme((
+  color: (
+    primary: $sts-v-app-primary,
+    accent: $sts-v-app-accent,
+    warn: $sts-v-app-warn,
+  )
+));

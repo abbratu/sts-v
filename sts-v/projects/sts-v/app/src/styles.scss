@@ -2,29 +2,26 @@
 @use '@angular/material' as mat;
 @include mat.core();
 @import './colors';
+@import './palettes';
+@import './themes';
 
 
-$sts-v-app-primary: mat.define-palette($sts-v-blue);
-$sts-v-app-accent: mat.define-palette($sts-v-yellow);
-$sts-v-app-warn: mat.define-palette($sts-v-red);
 
-$sts-v-app-dark-theme: mat.define-dark-theme((
-  color: (
-    primary: $sts-v-app-primary,
-    accent: $sts-v-app-accent,
-    warn: $sts-v-app-warn,
-  )
-));
-
-$sts-v-app-light-theme: mat.define-light-theme((
-  color: (
-    primary: $sts-v-app-primary,
-    accent: $sts-v-app-accent,
-    warn: $sts-v-app-warn,
-  )
-));
+// the dark theme background
+$test-color: map_get($sts-v-black, 500);
+$sts-v-dark-theme-palette-color : map-get($sts-v-app-dark-theme, color);
+$sts-v-dark-theme-palette-color-background: map-get($sts-v-dark-theme-palette-color, background);
+$sts-v-dark-theme-palette-color-background: map_merge($sts-v-dark-theme-palette-color-background, (background: $test-color));
+$sts-v-dark-theme-palette-color: map_merge($sts-v-dark-theme-palette-color, (background: $sts-v-dark-theme-palette-color-background));
+$sts-v-app-dark-theme: map_merge($sts-v-app-dark-theme, (color: $sts-v-dark-theme-palette-color));
 
 
+// the light theme background
+$sts-v-light-theme-palette-color : map-get($sts-v-app-light-theme, color);
+$sts-v-light-theme-palette-color-background: map-get($sts-v-light-theme-palette-color, background);
+$sts-v-light-theme-palette-color-background: map_merge($sts-v-light-theme-palette-color-background, (background: blue));
+$sts-v-light-theme-palette-color: map_merge($sts-v-light-theme-palette-color, (background: $sts-v-light-theme-palette-color-background));
+$sts-v-app-light-theme: map_merge($sts-v-app-light-theme, (color: $sts-v-light-theme-palette-color));
 
 html { 
     padding: 0;
@@ -42,7 +39,7 @@ html {
         }
 
         &.light-theme {
-            @include mat.all-component-themes($sts-v-app-light-theme);
+            @include mat.all-component-themes($sts-v-app-dark-theme);
         }
     }
 }
