@@ -1,0 +1,11 @@
+A  Housing
+
+B  Inlet
+
+C  Rotors
+
+D  Outlet
+
+E  Drive pulley
+
+F  Gears
