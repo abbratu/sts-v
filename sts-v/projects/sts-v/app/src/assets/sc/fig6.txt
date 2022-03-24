@@ -1,7 +1,0 @@
-A  Supercharger
-
-B  Intercooler
-
-C  Intake manifold
-
-D  Bypass valve

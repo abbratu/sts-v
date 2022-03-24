@@ -1,8 +1,0 @@
-@use '@angular/material' as mat;
-
-@import './colors';
-
-$sts-v-app-black: mat.define-palette($sts-v-black);
-$sts-v-app-primary: mat.define-palette($sts-v-blue);
-$sts-v-app-accent: mat.define-palette($sts-v-yellow);
-$sts-v-app-warn: mat.define-palette($sts-v-red);
