@@ -5,8 +5,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
-
-const MAT_MODULES = [ FlexLayoutModule, MatButtonModule, MatDividerModule, MatIconModule];
+import { MatListModule}  from '@angular/material/list';
+const MAT_MODULES = [ FlexLayoutModule, MatButtonModule, MatDividerModule, MatIconModule, MatListModule];
 
 @NgModule({
   imports: MAT_MODULES,
